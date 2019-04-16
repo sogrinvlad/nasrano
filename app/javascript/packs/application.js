@@ -15,19 +15,10 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import 'primereact/resources/themes/nova-light/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
-import 'primeflex/primeflex.css';
-import '../stylesheets/App.scss';
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 
 import Home from "../components/Home";
-
-console.log('Hello World from Webpacker');
-
 
 document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(
