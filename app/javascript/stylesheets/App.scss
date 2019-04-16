@@ -1,0 +1,18 @@
+@import "topbar";
+@import "sidebar";
+@import "content";
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f6f6f6;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+
+  .wrapper {
+    display: block;
+  }
+}
