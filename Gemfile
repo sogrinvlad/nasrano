@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 gem 'kaminari'
 gem 'dotenv-rails', groups: [:development, :test, :production]
+gem 'devise'
 # gem 'react-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
