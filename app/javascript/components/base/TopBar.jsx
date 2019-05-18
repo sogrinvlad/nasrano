@@ -1,17 +1,23 @@
 import React from "react";
-import {Button} from "primereact/button";
+import {Button} from "reactstrap";
+import { Col, Row } from "reactstrap";
 
 export default class TopBar extends React.Component {
 
     render() {
         return(
-            <div className="topbar">
-                Насрано логотип
+            <Row className="topbar">
+                <Col>Насрано логотип</Col>
+                <Col>
+                    <a href={'/users/sign_out'}>
+                        <Button color={'warning'} className={'float-right'}>
+                            Выйти
+                        </Button>
+                    </a>
+                </Col>
 
-                <a href={'/users/sign_out'}>
-                    <Button label={'Выйти'} className='p-button-warning'/>
-                </a>
-            </div>
+
+            </Row>
         )
 
     }

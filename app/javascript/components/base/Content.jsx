@@ -1,33 +1,17 @@
 import React from "react";
-import {Button} from "primereact/button";
+import { Button } from "reactstrap";
+
 import {ExcrementRadar} from "../ExcrementRadar";
+import Col from "reactstrap/src/Col";
 
 export default class Content extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
-            // excrements: []
             radarData: {}
         };
         this.postExcrement = this.postExcrement.bind(this)
-        // this.fetchExcrements = this.fetchExcrements.bind(this)
     }
-
-    // componentDidMount(){
-    //     this.fetchExcrements()
-    // }
-    //
-    // fetchExcrements(excrements = null){
-    //     if (excrements) {
-    //         this.setState({ excrements });
-    //     } else {
-    //         fetch('/api/v1/excrements.json')
-    //             .then((response) => {return response.json()})
-    //             .then((excrements) => {
-    //                 this.setState({ excrements });
-    //             });
-    //     }
-    // }
 
     componentDidMount() {
         this.fetchRadarData()
@@ -60,14 +44,15 @@ export default class Content extends React.Component {
         return(
             <div className="content">
                 <div className="p-justify-center">
-                    <div className="p-col"/>
-                    <div className="p-col excrement_element">
-                        <Button label={'Насрано!'} className='p-button-raised' onClick={this.postExcrement}/>
-                    </div>
+                    <Col className="excrement_element">
+                        <Button color={'primary'} onClick={this.postExcrement}>
+                            Насрано!
+                        </Button>
+                    </Col>
 
-                    <div className="p-col">
+                    <Col>
                         <ExcrementRadar radarData={this.state.radarData}/>
-                    </div>
+                    </Col>
 
                 </div>
             </div>

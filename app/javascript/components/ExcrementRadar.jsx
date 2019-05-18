@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
-import {Chart} from 'primereact/chart';
+import { Polar } from "react-chartjs-2";
 
 export class ExcrementRadar extends Component {
+
+    componentDidMount() {
+
+    }
+
     render() {
         const options = {
             title: {
@@ -14,11 +19,19 @@ export class ExcrementRadar extends Component {
                 labels: {
                     fontSize: 24
                 }
-            }
+            },
+            maintainAspectRatio: false
         }
         const data = this.props.radarData
         return (
-            <Chart type="polarArea" data={data} options={options} />
+            <Polar
+                data={data}
+                options={options}
+                width={500}
+                height={500}
+            />
         )
     }
 }
+
+//<Chart type="polarArea" data={data} options={options} />

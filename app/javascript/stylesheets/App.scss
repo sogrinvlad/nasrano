@@ -1,11 +1,4 @@
-// Сторонние библиотеки
-@import 'primereact/resources/themes/nova-light/theme.css';
-@import 'primereact/resources/primereact.min.css';
-@import 'primeicons/primeicons.css';
-@import 'primeflex/primeflex.css';
-// ---
 @import "topbar";
-@import "sidebar";
 @import "content";
 
 body {
@@ -20,5 +13,8 @@ body {
 
   .wrapper {
     display: block;
+    .container {
+      box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+    }
   }
 }

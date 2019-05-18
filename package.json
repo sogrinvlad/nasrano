@@ -8,11 +8,9 @@
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
     "classnames": "^2.2.6",
-    "primeflex": "^1.0.0-rc.1",
-    "primeicons": "^1.0.0",
-    "primereact": "^3.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.8.6",
     "react-transition-group": "^2.9.0",
     "reactstrap": "^8.0.0"
