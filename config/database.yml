@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: nasrano_production
-  username: nasrano
-  password: <%= ENV['NASRANO_DATABASE_PASSWORD'] %>
+  username: user
+  password: user
