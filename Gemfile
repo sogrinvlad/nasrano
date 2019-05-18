@@ -12,7 +12,6 @@ gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker'
 gem 'kaminari'
-gem 'recaptcha', '~> 4.14'
 gem 'dotenv-rails', groups: [:development, :test, :production]
 # gem 'react-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
