@@ -6,7 +6,7 @@ class Api::V1::ExcrementsController < ApplicationController
 
   def get_excrements(page: 1, per: 10)
     collection = Excrement.order(id: :desc).page(page).per(per)
-    res = collection.map{|el| { id: el.id, user_id: el.user_id, user_name: el.user.name, shit_out_at: el.shit_out_at} }
+    res = collection.map{|el| { id: el.id, user_id: el.user_id, user_name: el.user.first_name, shit_out_at: el.shit_out_at} }
     res
   end
 
@@ -30,8 +30,8 @@ class Api::V1::ExcrementsController < ApplicationController
   def radar_data
     data = {}
     Excrement.where('shit_out_at > ?', (Time.now-1.day).utc).each do |exc|
-      data[exc.user.name] ||= 0
-      data[exc.user.name] += 1
+      data[exc.user.first_name] ||= 0
+      data[exc.user.first_name] += 1
     end
 
     response = {
