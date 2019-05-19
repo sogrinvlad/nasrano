@@ -50,6 +50,7 @@ group :development do
   gem "capistrano-yarn"
   gem "capistrano-rvm"
   gem 'capistrano-secrets-yml'
+  gem 'listen'
 
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
