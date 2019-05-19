@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :home
   root to: 'home#index'
+  get :current_user, to: 'home#current_user_data'
+
 
   namespace :api do
     namespace :v1 do
