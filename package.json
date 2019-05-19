@@ -2,8 +2,6 @@
   "name": "nasrano",
   "private": true,
   "dependencies": {
-    "@babel/core": "^7.0.0-0",
-    "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "@rails/webpacker": "^4.0.2",
     "babel-loader": "^8.0.6",
@@ -11,16 +9,12 @@
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
     "classnames": "^2.2.6",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.15.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.8.6",
     "react-transition-group": "^2.9.0",
-    "reactstrap": "^8.0.0",
-    "webpack": "^4.31.0",
-    "webpack-cli": "^3.3.2"
+    "reactstrap": "^8.0.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.3.1"
