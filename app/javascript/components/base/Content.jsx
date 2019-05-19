@@ -3,6 +3,7 @@ import { Button } from "reactstrap";
 
 import {ExcrementRadar} from "../ExcrementRadar";
 import Col from "reactstrap/src/Col";
+import $ from "jquery";
 
 export default class Content extends React.Component {
     constructor (props) {
@@ -26,13 +27,15 @@ export default class Content extends React.Component {
     };
 
     postExcrement(){
-        let body = JSON.stringify({excrement: { user_id: (Math.floor(Math.random() * (6 - 1)) + 1) } })
-        fetch('/api/v1/excrements', {
+        let token = $('meta[name="csrf-token"]').attr('content');
+        console.log(token);
+        fetch('/api/v1/excrements/poop', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'X-CSRF-Token': token
             },
-            body: body,
+            body: JSON.stringify({}),
         }).then((response) => {return response.json()})
             .then((excrements)=>{
                 // this.fetchExcrements(excrements)

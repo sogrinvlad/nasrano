@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :excrements, only: [:index, :create, :destroy, :update] do
         collection do
           get :radar_data
+          post :poop
         end
       end
     end

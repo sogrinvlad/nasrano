@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Polar } from "react-chartjs-2";
+import { HorizontalBar } from "react-chartjs-2";
 
 export class ExcrementRadar extends Component {
 
@@ -15,16 +15,25 @@ export class ExcrementRadar extends Component {
                 fontSize: 36
             },
             legend: {
-                position: 'bottom',
-                labels: {
-                    fontSize: 24
-                }
+                position: 'none'
             },
-            maintainAspectRatio: false
+            maintainAspectRatio: false,
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        fontSize: 24
+                    }
+                }]
+            }
         }
         const data = this.props.radarData
         return (
-            <Polar
+            <HorizontalBar
                 data={data}
                 options={options}
                 width={500}

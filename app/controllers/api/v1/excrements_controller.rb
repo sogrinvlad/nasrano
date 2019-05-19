@@ -10,6 +10,16 @@ class Api::V1::ExcrementsController < ApplicationController
     res
   end
 
+  def poop
+    data = {
+        user_id: current_user.id,
+        shit_out_at: Time.now
+    }
+
+    excrement = Excrement.create(data)
+    render json: { succes: excrement.persisted? }
+  end
+
   def create
     params = excrement_params
     params.merge!(shit_out_at: Time.now)
@@ -37,7 +47,15 @@ class Api::V1::ExcrementsController < ApplicationController
     response = {
         datasets: [{
                        data: data.values,
-                       backgroundColor: %w(#FF6384 #4BC0C0 #FFCE56 #E7E9ED #36A2EB),
+                       backgroundColor: [
+                           'rgba(255, 99, 132, 1)',
+                           'rgba(54, 162, 235, 1)',
+                           'rgba(255, 206, 86, 1)',
+                           'rgba(75, 192, 192, 1)',
+                           'rgba(153, 102, 255, 1)',
+                           'rgba(255, 159, 64, 1)'
+                       ],
+                       borderWidth: 3,
                        label: 'My dataset'
                    }],
         labels: data.keys
