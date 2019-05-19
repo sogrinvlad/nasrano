@@ -4,7 +4,6 @@
 body {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
-  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #f6f6f6;
@@ -13,8 +12,10 @@ body {
 
   .wrapper {
     display: block;
-    .container {
+    height: 100%;
+    .content-container {
       box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+      padding-bottom: 2em;
     }
   }
 }

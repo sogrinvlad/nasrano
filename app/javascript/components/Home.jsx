@@ -7,7 +7,7 @@ export default class Home extends React.Component {
     render() {
         return (
             <div className={'wrapper'}>
-                <Container>
+                <Container className={'content-container'}>
                     <TopBar/>
                     <Content/>
                 </Container>
